@@ -4,19 +4,16 @@ var_num=gets.chomp.to_i
 
 if var_num >=1 && var_num <= 25
 	puts "Voici la pyramide :"
-	i = var_num / 2
-	j = 1
-	while j <= var_num
-		if i > 0
-			i.times do
-				print ' '
-			end
-		i-=1
+	i = 1
+	while var_num >= 0
+		var_num.times do
+			print ' '
 		end
-		j.times do
+		var_num-=1
+		i.times do
 			print '#'
 		end
-		j+=1
+		i+=1
 		print "\n"
 	end
 else
