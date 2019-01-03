@@ -1,3 +1,4 @@
+#{} permet d'effectuer l'opération entre crochet puis de considérér le résultat comme une chaine de caractère ce qui permet de l'afficher
 puts "On va compter le nombre d'heures de travail à THP" #affiche la phrase
 puts "Travail : #{10 * 5 * 11}" #affiche travail et le résultat du calcul
 puts "En minutes ça fait : #{10 * 5 * 11 * 60}" #idem
