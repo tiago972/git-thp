@@ -1,0 +1,43 @@
+/* original CSS */
+body
+{
+	font-size: 18px;
+	width: 650px;
+	margin: 40px  auto;
+	line-height: 1.6;
+	color: #444;
+	background-color: #FF00FF;
+}
+
+h1, h2, h3
+{
+	line-height: 1.2;
+	color: green;
+	font-family: 'Comic Sans MS';
+}
+
+p
+{
+	clear: both;
+	color: blue;
+	font-family: 'Papyrus';
+}
+.italique
+{
+	font-style: italic;
+}
+
+span[class="gras"]
+{
+	font-weight: bold;
+}
+
+span[class="courier new"]
+{
+	font-family: "Courier New";
+}
+button
+{
+	position: absolute;
+	right: 10px;
+}
