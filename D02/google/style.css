@@ -1,0 +1,97 @@
+body 
+{
+	margin: 0px;
+	font-family: arial;
+	font-size: small;
+}
+
+#head
+{
+	display: flex;
+	justify-content: space-around;
+	width: 20%;
+	margin-left: auto;
+	flex-wrap: wrap;
+	margin-top: 15px;
+}
+
+.connexion /*bouton connexion*/
+{
+	background: #4285f4;
+	border: 1px solid #4285f4;
+	color: white;
+	font-size: 13px;
+	text-align: center;
+	padding: 0 12px;
+	font-weight: bold;
+	line-height: 28px;
+}
+
+#corps
+{
+	text-align: center;
+	margin-top: 160px;
+}
+
+input[type="text"] /*champs de saisie; moi il n'y avait pas l'image du micro sur la mmienne donc j'ai pas pu la chopper */
+{
+	width: 32%;
+	height: 42px;
+	border: none;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);
+}
+input[type="submit"]/*les deux boutons en bas du champs blanvs*/
+{
+	background-color: #f1f1f1;
+	height: 36px;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	border: 1px solid #f1f1f1;
+	font-weight: bold;
+	font-size: 13px;
+	color: #757575;
+	text-align: center;
+	padding: 0 16px;
+	line-height: 27px
+}
+footer
+{
+	position: absolute; /*j'ai pas encore bien compris les histoires de absolute et relative dans poisition mais j'ai essayé a taton*/
+	text-align: left;
+	bottom: 0px;
+	width: 100%;
+	background-color: #f1f1f1;
+	line-height: 30px;
+	margin-left: 0px;
+}
+
+.foot_up
+{
+	padding-left: 30px;
+	border-bottom: 1px solid #e4e4e4;
+	color: rgba(0,0,0,.54);
+}
+#foot_bottom
+{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	font-size: 10pt;
+	color: rgba(0,0,0,.54);
+}
+
+.fe:nth-child(4)
+{
+	flex: 5;
+}
+.fe:nth-child(-n+3) {
+	flex: 1;
+	margin-left: 30px;
+}
+.fe:nth-child(5) {
+	flex: 1.5;
+}
+.fe:nth-child(n+6) {
+	flex: 1;
+}
