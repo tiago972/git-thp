@@ -15,11 +15,11 @@ end
 def call_function(var_int, var_array)
 	case var_int
 	when 1
-		puts "#{var_array.size}"
+		puts " Le tableau contient #{var_array.size} comptes"
 		puts "*****************"
 		program_choose(var_array)
 	when 2
-		puts "#{start_nb(var_array)}"
+		puts "Il y a #{start_nb(var_array)} personnes dont le handle contient un chiffre"
 		puts "*****************"
 		program_choose(var_array)
 	when 3
@@ -66,6 +66,7 @@ def program_choose(var_array)
 	9 quelle est la position dans l'array de la personne @epenser?
 	*************************************************************	
 	N'importe quelle touche pour quitter"
+	print ('> ')
 	enter = gets.to_i
 	if enter <= 9 && enter >= 1
 		call_function(enter, var_array)
