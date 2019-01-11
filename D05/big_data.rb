@@ -64,7 +64,7 @@ def sort_50(var_array)
 		i+=1
 	end
 	i = 0
-	while i <= 50	
+	while i < 50	
 		puts "#{var_array[i]}"
 		i+=1
 	end

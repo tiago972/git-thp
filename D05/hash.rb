@@ -1,16 +1,16 @@
 local_dir = File.expand_path('../', __FILE__)
 $LOAD_PATH.unshift(local_dir)
 require "var_hash.rb"
-
+=begin
 var_hash = $TAB1.map(&:to_sym).zip($TAB2).to_h
 
 def call_function(enter, var_hash)
 	case enter
 	when 1
-		puts "La plus grosse crypto monnaie est #{biggest(var_hash)}"
+		puts "La plus grosse crypto monnaie est #{var_hash.values.max}"
 		puts "*****************"
 		2.times {puts (" ")}
-		program_choose(var_array)
+		program_choose(var_hash)
 	end
 end
 
@@ -31,5 +31,16 @@ def program_choose(var_hash)
 		call_function(enter, var_hash)
 	end
 end
-
-program_choose(var_hash)
+=end
+hash2 = {:test1 => "$1", :test2 => "$2", :test3 => "$50"}
+def biggest_value(var_hash)
+	var_hash.each do |key, value|
+		value = value.sub(/$/, '')
+		value = value.to_i
+	end
+	test = var_hash.values.max
+	test2 = var_hash.select{|key, value| value == test}
+	puts "#{test} le tableau : #{test2}"
+end
+biggest_value(hash2)
+#program_choose(var_hash)
