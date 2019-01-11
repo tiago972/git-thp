@@ -10,7 +10,7 @@ def biggest_value(var_hash)
 	end
 	val_max = var_hash.values.max	
 	key_val_max = var_hash.select{|key, value| value == val_max}
-	puts "La plus grosse crypto est #{key_val_max.keys.to_s.sub(/\[:\"/, '').sub(/\"\]/,'')} pour une valeur de #{val_max}$"
+	puts "La plus grosse crypto est #{key_val_max.keys.to_s.delete('[:"]')} pour une valeur de #{val_max}$"
 end
 
 def smallest_value(var_hash)
@@ -19,10 +19,7 @@ def smallest_value(var_hash)
 	end
 	val_min = var_hash.values.min	
 	key_val_min = var_hash.select{|key, value| value == val_min}
-	puts "La/les plus petites cryptos sont :"
-	key_val_min.each do |key, value|
-		puts "#{key.to_s.sub(/\[:/, '').sub(/\]/,'')}" + " valant " + "#{val_min}" + "$"
-	end	
+	puts "La/les plus petites cryptos sont : #{key_val_min.keys.to_s.delete('{}[:]')} avec une valeur de #{val_min}$"
 end
 
 def count_coin(var_hash)
@@ -57,7 +54,7 @@ def which_highest_in_low(var_hash)
 	end
 	val_max = i.values.max	
 	key_val_max = var_hash.select{|key, value| value == val_max}
-	puts "La monnaie dont la valeur est la plus haute dans celles valant moins de 6000$ est #{key_val_max.keys.to_s.sub(/\[:\"/, '').sub(/\"\]/,'')} avec une valeur de #{val_max}$"
+	puts "La monnaie dont la valeur est la plus haute dans celles valant moins de 6000$ est #{key_val_max.keys.to_s.delete('[:]')} avec une valeur de #{val_max}$"
 end
 
 def call_function(enter, var_hash)
