@@ -1,0 +1,38 @@
+Io! Ces programmes incroyables ont été fait par Quentin VANDECANDELAERE (@Quentin) et Edouard Baudouin (@Edouard)
+
+lib/00_hello.rb : heu programme assez straight-forward : mets ton nom et tu auras le bonjour de notre part, la méthode .chomp est utilisée pour virer le retour chariot
+#########################################
+
+lib/01_pyramids.rb: 
+Les 3 méthodes sont présentées (semaine 0 half pyramid, puis full_pyramide) et seule wtf_pyramide est mise en exécutable.
+
+Logique assez simple: 
+
+-half pyramide : c'est juste une itération avec times qui part de 0 à "store_number - 1" qui est la valeur saisie. i est itéré afin de diminuer les espaces et d'augmenter les #.  Précision commentaire ligne 7
+
+-full pyramide: L'idée est la même sauf qu'il faut rajouter autant d'espace à gauche qu'a droite et de ne prendre en compte que le nombre de # impaire d'ou 2i-1 (cf ligne 22).
+Petit rajout de notre: nous avons conservé la consigne initiale telle que le chiffre >0 et <26; le programme se relance tout seul si la saisie est erronée.
+
+-wtf_pyramide: Du coup construction identique sauf que la construction est en deux morceaux donc ligne 40 et 45
+##############################################"
+
+lib/02_password.rb: C'est la même logique que le programme hello et de rappelle de fonction tant que la condition n'est pas respectée.
+##############################################
+
+lib/03_stairway.rb:
+/_\/_\ LES COMMANDES EN COMMENTAIRES:/_\/_\ 
+si vous le lancer le programme de base (le jeu pour une seule partie) supprimer tous les # sinon le programme exécutable est la moyenne du nombre de coup nécessaire pour un nombre de parties >= 100.
+
+La première méthode throw_dice sert à lancer le dé par la méthode rand qui renvoie la variable value qui est en entier entre 1 et 6.
+La troisième appelée "game" sert à lancer le jeu et à renvoyer le nombre de coups joués donnés par la variable nb_tries (cf ci dessous).
+
+La seconde (coeur du programme): prend trois argument: le résultat de throw_dice, un entier qui représente la case du joueur et un compteur du nombre de coups pour gagner (nb_tries). Structure conditionnelle pour les règles car un case when.
+Méthode utilisée: récursivité plutôt que itération par boucle: la fonction se rappelle elle-même si la position n'est pas égale à 10. Itération du nombre de coups après chaque lancé nb_tries+=1.
+
+average_finish_time: 
+on va stocker dans le tableau var_array les valeurs retournées par nb_tries (nombre de coups nécessaires pour finir le jeu). 
+Ligne 40: on demande de rentrer un nombre de partie (au moins 100) puis calcule de la moyenne.
+
+
+
+BISOUS
