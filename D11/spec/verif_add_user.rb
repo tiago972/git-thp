@@ -13,8 +13,14 @@ describe "test user_add" do
 
 	it "test the name" do
 		user = User.new('julie_test@test.com')
-		user.name("Julie")
-		expect(user.name).to eq("Julie")
+		user.name('Julie')
+		expect(user.name).to eq('Julie')
+	end
+
+	it "test of the user_array" do
+	user = User.new('julie_test@test.com')
+	user.name("Julie")
+	expect(User.array.select{|x| x[:email] == "julie_test@test.com"}[0][:name]).to eq("Julie")
 	end
 end
 
