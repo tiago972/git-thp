@@ -9,10 +9,6 @@ class User
 		@@var_user << h
 	end
 
-	def name
-		@name
-	end
-
 	def name=(name)
 		@name = name
 		@@var_user.select{|x| x[:email] == @email}[0]["name".to_sym] = name
