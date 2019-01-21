@@ -3,15 +3,12 @@ class User
 	@@var_user = []
 
 	def initialize(email)
-		h = {}
 		@email = email
-		h["email".to_sym] = email
-		@@var_user << h
+		@@var_user << self
 	end
 
-	def name=(name)
-		@name = name
-		@@var_user.select{|x| x[:email] == @email}[0]["name".to_sym] = name
+	def self.find_by_email(email)
+		return @@var_user.select{|x| x.email ==  email}[0]
 	end
 
 	def self.array

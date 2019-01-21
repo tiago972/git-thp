@@ -3,9 +3,11 @@ require 'pry'
 
 class Event
 	attr_accessor :start_date, :duration, :title, :attendees
+	@@var_array = []
 
 	def initialize(start_date, duration, title, attendees)
 		@start_date, @duration, @title, @attendees = Time.parse(start_date), duration, title, attendees
+		@@var_array << self
 	end
 
 	def postpone_24
@@ -37,11 +39,15 @@ class Event
 			return false
 		end
 	end
-	def print_event
-		puts @start_date.strftime("%F %T")
-		puts @duration
-		puts @title
-		puts @attendees
+	
+	def self.find_by_title(title)
+		return @@var_array.select{|x| x.title ==  title}[0]
 	end
 
+	def to_s
+		puts "Titre: " + @title
+		puts "Date de début: " + @start_date.strftime("%F %T").to_s
+		puts "Durée: " + @duration.to_s + " min"
+		puts "Invités: " +  @attendees.join(", ")
+	end
 end
