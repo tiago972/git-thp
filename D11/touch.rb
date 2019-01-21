@@ -8,7 +8,6 @@ puts julie.name
 #puts julie.email
 #puts julie.name
 #puts User.array
-test = Event.new("2019-01-13 09:00", 10, "standup quotidien", ["truc@machin.com", "bidule@chose.fr"])
+test = Event.new("2019-01-21 15:00", 10, "standup quotidien", ["truc@machin.com", "bidule@chose.fr"])
 test.print_event
-test.postpone_24
-test.print_event
+puts test.is_it_soon?
