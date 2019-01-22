@@ -5,7 +5,7 @@ mkdir lib
 mkdir lib/app
 mkdir lib/views
 mkdir db
-echo "require \'bundler\'
+echo "require 'bundler'
 Bundler.require" > app.rb
 touch README.md
 echo "source \"https://rubygems.org\"
