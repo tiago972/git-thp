@@ -12,8 +12,6 @@ echo "source \"https://rubygems.org\"
 ruby '2.5.1'
 gem 'rspec'
 gem 'pry'
-gem 'rubocop', '~> 0.57.2'
-gem 'watir'
-gem 'nokogiri'" > Gemfile
+gem 'rubocop', '~> 0.57.2'" > Gemfile
 touch .env
 echo ".env" > .gitignore
