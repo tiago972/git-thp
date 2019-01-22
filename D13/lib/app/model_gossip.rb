@@ -15,7 +15,8 @@ class ModelGossip
   def self.all
     return_array = []
     CSV.open('db/potin.csv', "r").each do |row|
-      print row
+      tmp_ModelGossip = ModelGossip.new(row[0], row[1])
+      return_array << tmp_ModelGossip
     end
     return return_array
   end

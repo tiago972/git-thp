@@ -20,7 +20,7 @@ class ControllerGossip
       exit
     when 2
       temp = ModelGossip.all
-      #@view_gossip.all(temp)
+      @view_gossip.all(temp)
     end
   end
 end
