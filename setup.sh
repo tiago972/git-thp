@@ -5,7 +5,8 @@ mkdir lib
 mkdir lib/app
 mkdir lib/views
 mkdir db
-echo "require 'bundler'
+echo "$:.unshift File.expand_path("./../lib", __FILE__)
+require 'bundler'
 Bundler.require" > app.rb
 touch README.md
 echo "source \"https://rubygems.org\"
