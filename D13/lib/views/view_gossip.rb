@@ -9,11 +9,16 @@ class ViewGossip
   end
 
   def which
-    print "Par auteur? Tape 1\nSelon ce qui a dedans?tape 2\nTous? tape 3\n>  "
+    print "Par auteur? Tape 1\nSelon ce qui a dedans? Tape 2\nTous? tape 4\n>  "
     var_which = gets.to_i
     return var_which
   end
 
+  def print_by_author(all_db, author_sel)
+    puts "Les messages de #{author_sel} sont:\n"
+    all_db.select{ |x| x.author == author_sel }.each{ |y| puts y.content}
+  end
+  
   def all(all_db)
     puts "++++++++++++++++++++++++++"
     all_db.each do |row|
@@ -23,12 +28,13 @@ class ViewGossip
       puts "+++++++++++++++++++++++++"
     end
   end
-
+  
   def author_sel(all_db)
     puts "Les auteurs sont :"
     all_db.each do |row|
       puts row.author
     end
+    print '> '
     return gets.chomp
   end
 
