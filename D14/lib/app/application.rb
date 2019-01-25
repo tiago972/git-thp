@@ -26,6 +26,7 @@ class Application
         puts $PEGASUS
         puts "À bientôt !"
         sleep(1)
+        system "clear"
         break
       end
     end
