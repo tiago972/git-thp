@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Affichage</title>
+  </head>
+  <body>
+    <% array_gossip.each_with_index do |gossip, i| %>
+      <p>
+        <%= gossip.author %></br>
+        <a href="/edit/<%= i + 1%>/"><%= gossip.content %></a>    
+    </p>
+  <% end %>
+  </body>
+</html>
+  

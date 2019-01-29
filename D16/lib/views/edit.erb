@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title> Edit </title>
+  </head>
+  <body>
+    <p>
+    Tu as chois un gossip de <%= gossip.author %></br></p>
+    <form action='/edit/<%= indentation.to_i %>/' method='POST'></br>
+      corrige le potin : <input type ='text' name='gossip_content'/>
+      <input type='hidden' name='gossip_author' value='<%= gossip.author %>'/>  
+      <input type='submit'/>
+    </form>
+  </body>
+</html>
